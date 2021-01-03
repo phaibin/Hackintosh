@@ -98,6 +98,8 @@
 		<array/>
 		<key>Quirks</key>
 		<dict>
+			<key>AllowRelocationBlock</key>
+			<false/>
 			<key>AvoidRuntimeDefrag</key>
 			<true/>
 			<key>DevirtualiseMmio</key>
@@ -318,6 +320,24 @@
 				<true/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/IntelMausi</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>Any</string>
+				<key>BundlePath</key>
+				<string>MacProMemoryNotificationDisabler.kext</string>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/MacProMemoryNotificationDisabler</string>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
@@ -934,9 +954,7 @@
 	<key>Misc</key>
 	<dict>
 		<key>BlessOverride</key>
-		<array>
-			<string>\EFI\Microsoft\Boot\bootmgfw.efi</string>
-		</array>
+		<array/>
 		<key>Boot</key>
 		<dict>
 			<key>ConsoleAttributes</key>
@@ -994,6 +1012,8 @@
 				<string>CustomOS</string>
 				<key>Path</key>
 				<string>PciRoot(0x0)/Pci(0x1,0x1)/Pci(0x0,0x0)/NVMe(0x1,11-22-33-44-55-66-77-88)/HD(1,GPT,00000000-0000-0000-0000-000000000000,0x800,0x64000)/\EFI\BOOT\BOOTX64.EFI</string>
+				<key>TextMode</key>
+				<false/>
 			</dict>
 		</array>
 		<key>Security</key>
@@ -1005,6 +1025,8 @@
 			<key>ApECID</key>
 			<integer>0</integer>
 			<key>AuthRestart</key>
+			<false/>
+			<key>BlacklistAppleUpdate</key>
 			<false/>
 			<key>BootProtect</key>
 			<string>None</string>
@@ -1020,10 +1042,10 @@
 			<data></data>
 			<key>PasswordSalt</key>
 			<data></data>
-			<key>SecureBootModel</key>
-			<string>Disabled</string>
 			<key>ScanPolicy</key>
 			<integer>0</integer>
+			<key>SecureBootModel</key>
+			<string>Disabled</string>
 			<key>Vault</key>
 			<string>Optional</string>
 		</dict>
@@ -1042,6 +1064,10 @@
 				<string>OpenShell.efi</string>
 				<key>Path</key>
 				<string>OpenShell.efi</string>
+				<key>RealPath</key>
+				<false/>
+				<key>TextMode</key>
+				<false/>
 			</dict>
 		</array>
 	</dict>
@@ -1075,8 +1101,6 @@
 				<data>/w8AAA==</data>
 				<key>run-efi-updater</key>
 				<string>No</string>
-				<key>prev-lang:kbd</key>
-				<data>ZW4tVVOj</data>
 			</dict>
 		</dict>
 		<key>Delete</key>
@@ -1161,30 +1185,30 @@
 			<key>SystemProductName</key>
 			<string>iMacPro1,1</string>
 			<key>SystemSerialNumber</key>
-			<string>C02VDBZ6HX87</string>
+			<string>C02VXTYLHX87</string>
 			<key>SystemUUID</key>
-			<string>42F63A7B-2029-4916-8F2A-E8F8A5807D51</string>
+			<string>4CC7C489-CD3B-49D7-9E22-1FCF90008915</string>
 		</dict>
 		<key>Generic</key>
 		<dict>
 			<key>AdviseWindows</key>
 			<false/>
 			<key>MLB</key>
-			<string>C027375014NJG361H</string>
+			<string>C02753310GUJG36FB</string>
 			<key>ProcessorType</key>
 			<integer>3841</integer>
-			<key>SystemMemoryStatus</key>
-			<string>Auto</string>
 			<key>ROM</key>
 			<data>mkKXtV7W</data>
 			<key>SpoofVendor</key>
 			<false/>
+			<key>SystemMemoryStatus</key>
+			<string>Auto</string>
 			<key>SystemProductName</key>
 			<string>iMacPro1,1</string>
 			<key>SystemSerialNumber</key>
-			<string>C02VDBZ6HX87</string>
+			<string>C02VXTYLHX87</string>
 			<key>SystemUUID</key>
-			<string>42F63A7B-2029-4916-8F2A-E8F8A5807D51</string>
+			<string>4CC7C489-CD3B-49D7-9E22-1FCF90008915</string>
 		</dict>
 		<key>PlatformNVRAM</key>
 		<dict>
@@ -1195,9 +1219,11 @@
 			<key>FirmwareFeaturesMask</key>
 			<data>P/+f/wAAAAA=</data>
 			<key>MLB</key>
-			<string>C027375014NJG361H</string>
+			<string>C02753310GUJG36FB</string>
 			<key>ROM</key>
 			<data>mkKXtV7W</data>
+			<key>SystemUUID</key>
+			<string>4CC7C489-CD3B-49D7-9E22-1FCF90008915</string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
@@ -1238,7 +1264,7 @@
 			<key>MinimumVolume</key>
 			<integer>20</integer>
 			<key>PlayChime</key>
-			<false/>
+			<string></string>
 			<key>VolumeAmplifier</key>
 			<integer>0</integer>
 		</dict>
